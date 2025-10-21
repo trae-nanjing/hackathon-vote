@@ -1,0 +1,23 @@
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[context.production.environment]
+  VITE_SUPABASE_URL = "https://kktjreinphhigrmlbbse.supabase.co"
+  VITE_SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtrdGpyZWlucGhoaWdybWxiYnNlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjA5NDExNDcsImV4cCI6MjA3NjUxNzE0N30.1kiVGH90TAbtFdDfzaZ3kUI-ExD7fGGFW1Pd0gfCakU"
+
+[context.deploy-preview.environment]
+  VITE_SUPABASE_URL = "https://kktjreinphhigrmlbbse.supabase.co"
+  VITE_SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtrdGpyZWlucGhoaWdybWxiYnNlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjA5NDExNDcsImV4cCI6MjA3NjUxNzE0N30.1kiVGH90TAbtFdDfzaZ3kUI-ExD7fGGFW1Pd0gfCakU"
+
+[context.branch-deploy.environment]
+  VITE_SUPABASE_URL = "https://kktjreinphhigrmlbbse.supabase.co"
+  VITE_SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtrdGpyZWlucGhoaWdybWxiYnNlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjA5NDExNDcsImV4cCI6MjA3NjUxNzE0N30.1kiVGH90TAbtFdDfzaZ3kUI-ExD7fGGFW1Pd0gfCakU"

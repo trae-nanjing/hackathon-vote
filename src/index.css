@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 移动端优化样式 */
+.mobile-device {
+  /* 防止移动端页面缩放 */
+  touch-action: manipulation;
+  /* 优化移动端滚动 */
+  -webkit-overflow-scrolling: touch;
+}
+
+.touch-interface {
+  /* 增大触摸目标 */
+  --touch-target-size: 44px;
+}
+
+.touch-interface button,
+.touch-interface a,
+.touch-interface input {
+  min-height: var(--touch-target-size);
+  min-width: var(--touch-target-size);
+}
+
+/* 移动端按钮优化 */
+.mobile-device button {
+  /* 防止移动端按钮高亮 */
+  -webkit-tap-highlight-color: transparent;
+  /* 优化触摸反馈 */
+  touch-action: manipulation;
+}
+
+/* 移动端输入框优化 */
+.mobile-device input,
+.mobile-device textarea {
+  /* 防止移动端输入时页面缩放 */
+  font-size: 16px;
+}
+
+/* 移动端滚动优化 */
+.mobile-layout {
+  /* 优化移动端滚动性能 */
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+/* 移动端卡片间距优化 */
+@media (max-width: 768px) {
+  .mobile-layout .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .mobile-layout .grid {
+    gap: 1rem;
+  }
+}
+
+/* 移动端文字大小优化 */
+@media (max-width: 640px) {
+  .mobile-layout h1 {
+    font-size: 1.5rem;
+  }
+  
+  .mobile-layout h2 {
+    font-size: 1.25rem;
+  }
+  
+  .mobile-layout h3 {
+    font-size: 1.125rem;
+  }
+}
+
+/* 移动端动画优化 */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
