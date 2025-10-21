@@ -18,6 +18,11 @@ export interface Team {
   project_url?: string
   created_at: string
   updated_at: string
+  captain_name?: string
+  contact_info?: string
+  project_description?: string
+  is_registered?: boolean
+  registration_date?: string
 }
 
 export interface Vote {
