@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Toaster } from "sonner";
 import { MobileOptimized } from "./components/MobileOptimized";
 import Home from "@/pages/Home";
+import Results from "@/pages/Results";
 
 export default function App() {
   return (
@@ -10,6 +11,7 @@ export default function App() {
         <div className="min-h-screen bg-gray-50">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/results" element={<Results />} />
           </Routes>
           <Toaster 
             position="top-center"
